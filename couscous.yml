@@ -1,8 +1,0 @@
-template:
-  directory: website
-  index: index.md
-
-include:
-  - website/engine
-
-title: Light-PHP Documentation

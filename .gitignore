@@ -1,1 +1,2 @@
-.couscous/*
+node_modules/*
+docs/.vuepress/*
