@@ -13,53 +13,53 @@ This framework it's optimized for Apache web servers, and MySql servers.
 
 ### Routes
 
-Browser url:  
-![An image](./images/url.png)
+All the routes are defined in `system/config/routes.php`, here defines relation between url and controller:  
 
+``` php
+$routes["home"] = "info/info/welcome"
+```
 
-system/config/routes.php:  
-
-![An image](./images/routes.png)
-
-info/info/welcome => controller/info/infoController->welcome().  
+`yourwebsite.com/home` = `info/info/welcome`  
+`info/info/welcome` = `controller/info/infoController->welcome()`
 
 
 ### Index.php
+
+![An image](./images/index.png)
+
+### Controller
+
 ``` php
+class productController{
 
-//Config
-require('config.php');
+	public function getProduct(){
 
-//Engine
-require(SYSTEM . 'engine/Config.php');
-require(SYSTEM . 'engine/Url.php');
-require(SYSTEM . 'engine/Controller.php');
-require(SYSTEM . 'engine/Session.php');
-require(SYSTEM . "engine/Output.php");
-require(SYSTEM . 'engine/Connection.php');
-require(SYSTEM . 'engine/Util.php');
-require(SYSTEM . 'engine/Errors.php');
-require(SYSTEM . 'engine/SecModel.php');
-require(SYSTEM . 'engine/SecController.php');
+		$prod_id = $_GET["prod_id"]; //Already escaped
 
-//Bootstrap
-require("config_data.php");
-require(SYSTEM. "start.php");
+		require(MODEL."product/product.php");
+		$product_model = new productModel();
 
-set_error_handler( array(new Errors(),"my_error_handler") ,E_ALL);
-error_reporting(E_ALL);
+		$data = array();
+		$data["prod"] = $product_model->getProd($prod_id);
 
-//escape $_POST,$_GET,$_COOKIE
-Util::cleanInput();
-
-//Composer
-require(SYSTEM."libraries/vendor/autoload.php");
-
-//Execute controller
-$Controller = new Controller();
-$Controller->execController();
-
-//DB
-Connection::$CONN->close();
+		Output::load("product/productView", $data);
+	}
+}
 ```
 
+### Model
+
+``` php
+class productModel{
+	public function getProd($id){
+		return Connection::query("SELECT * FROM `product` WHERE id = ".$id);
+	}
+}
+```
+
+### View
+
+``` html
+<h1>Product info</h1>
+<p>{%prod["name"]%}</p>
+```
