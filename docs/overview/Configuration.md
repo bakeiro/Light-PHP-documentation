@@ -1,7 +1,22 @@
 # :gear: Configuration
 
-The file `config.php` defines the database connection and the paths of the framework, this is the most basic configuration file for the framework.  
+We have 3 files:
+- `config.php`
+- `system/config/config_data.php`
+- `system/config/php_settings.php`
 
-After this file all the configuration goes inside `system/config_data.php` here defines all the FTP/Email/dbugging/Session/Cache and more settings.
+### config.php
+Most basic configuration file, here defines the database connection and the folder paths.
 
-And this is everything!
+### config_data.php
+Here you can configurate the framework variables like:
+
+- the FTP
+- Email
+- Dbugging
+- Session
+- Cache
+- More
+
+### php_settings
+All the init_set functions
