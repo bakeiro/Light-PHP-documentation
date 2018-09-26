@@ -1,9 +1,21 @@
+<style module>
+	.index_img {
+		height: 500px;
+		border-radius: 2px;
+		margin-top: 10px;
+	}
+</style>
+
+
 # Overview
 Here I display the most basic information to use this framework.  
 Here you can see what the index.php does, how to write routes, and how to make a controller/model and a view.
 
-### Entry point (index.php)
-![An image](../images/index.png)
+### Entry point (index.php)  
+  
+
+<img :class="$style.index_img" src="../images/index.png" alt="entry point">
+
 
 The entry point of this app consist in a few steps:
 - Always get the basic resources for working (the engine)
