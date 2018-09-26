@@ -1,3 +1,10 @@
+<style module>
+	.structure_img {
+		height: 800px;
+	}
+</style>
+
+
 # Light-PHP
 
 ### Introduction
@@ -12,7 +19,7 @@ More info  [Github project](https://github.com/bakeiro/Light-PHP/)
 
 ### Features
 
-- Powerfull
+- Powerful
 - Fast
 - Simple
 - Shelf explained code
@@ -22,4 +29,4 @@ More info  [Github project](https://github.com/bakeiro/Light-PHP/)
 
 ### Structure
 
-![An image](./images/structure_png.png)
+<img :class="$style.structure_img" src="./images/structure_png.png" alt="foo">
