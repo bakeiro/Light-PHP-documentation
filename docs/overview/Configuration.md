@@ -2,14 +2,14 @@
 
 We have 3 files:
 - `config.php`
-- `system/config/config_data.php`
-- `system/config/php_settings.php`
+- `config_data.php`
+- `php_settings.php`
 
 ### config.php
-Most basic configuration file, here defines the database connection and the folder paths.
+`config.php` Most basic configuration file, here defines the database connection and the folder paths.
 
 ### config_data.php
-Here you can configurate the framework variables like:
+`system/config/config_data.php` Here you can configurate the framework variables like:
 
 - the FTP
 - Email
@@ -19,4 +19,4 @@ Here you can configurate the framework variables like:
 - More
 
 ### php_settings
-All the init_set functions
+`system/config/php_settings.php` All the init_set functions
