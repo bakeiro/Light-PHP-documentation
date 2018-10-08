@@ -1,5 +1,5 @@
 module.exports = {
-	base: 'Light-PHP-documentation/',
+	base: '/Light-PHP-documentation/',
 	dest: 'docs',
 	title: 'Light-PHP',
 	description: 'Light-PHP documentation, Micro framework PHP',
