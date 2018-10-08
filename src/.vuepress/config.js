@@ -1,6 +1,6 @@
 module.exports = {
-	base: 'Light-PHP-documentation',
-	dest: 'vuepress',
+	//base: '',
+	dest: 'docs',
 	title: 'Light-PHP',
 	description: 'Light-PHP documentation, Micro framework PHP',
 
