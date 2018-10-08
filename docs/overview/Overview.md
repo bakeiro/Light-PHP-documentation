@@ -1,32 +1,47 @@
-<style module>
-	.index_img {
-		height: 500px;
-		border-radius: 2px;
-		margin-top: 10px;
-	}
-</style>
-
-
 # :earth_africa: Overview
-Here I display the most basic information to use this framework.  
-Here you can see what the index.php does, how to write routes, and how to make a controller/model and a view.
+Basic overview, here I display the basic information of this framework.  
+Here you can see what does the entry point, how to write routes, and how the MVC structure works.
 
-### Entry point (index.php)  
+### index.php  
   
+``` php
+//Require engine
+require('config.php');
+require(SYSTEM . 'engine/Config.php');
+require(SYSTEM . 'engine/Url.php');
+require(SYSTEM . 'engine/Controller.php');
+require(SYSTEM . 'engine/Session.php');
+require(SYSTEM . "engine/Output.php");
+require(SYSTEM . 'engine/Connection.php');
+require(SYSTEM . 'engine/Util.php');
+require(SYSTEM . 'engine/Errors.php');
+require(SYSTEM . 'engine/SecModel.php');
+require(SYSTEM . 'engine/SecController.php');
 
-<img :class="$style.index_img" src="../images/index.png" alt="entry point">
+//Composer
+require(SYSTEM."libraries/vendor/autoload.php");
 
+//Startup processs
+require(SYSTEM. "start.php");
 
-The entry point of this app consist in a few steps:
-- Always get the basic resources for working (the engine)
+//Exec main controller
+$Controller = new Controller();
+$Controller->execController();
+
+//Close DB
+Connection::$CONN->close();
+```  
+  
+The basic working of the index.php file is:
+- Always get the basic resources for working (the engine and composer)
 - Startup the framework (getting the configuration, starting connection to the database etc)
-- Execute the function (based on the url)
+- Execute the main function (based on the url)
 - Close the db connection
 
 
 ### Routes
 
-The routes are defined in `system/config/routes.php`, here defines relation between url and controller:  
+The routes are defined in `system/config/routes.php`, here defines an array key value, the key it's the seo-url (if exist) and the value is the controller's function to be executed:  
 
 This means that for a custom-url route is associated to a method from one controller class (MVC structure).  
 You can also don't write a custom url, and use index.php?route=info/info/welcome instead.
