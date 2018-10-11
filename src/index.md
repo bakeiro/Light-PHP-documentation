@@ -38,4 +38,4 @@ More info  [Github project](https://github.com/bakeiro/Light-PHP/)
 ### Welcome page
 After you start the web and database server, this is will be your welcome page:
 
-<img :class="$style.welcome_img" src="./images/welcomePage.png" alt="foo"> 
+<img :class="$style.welcome_img" src="./images/welcomePage.png" alt="foo">
