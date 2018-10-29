@@ -10,11 +10,11 @@
 
 # Light-PHP
 
-### Introduction
-
 ::: warning Education purposes
 Do not use it in production, not safe and unfinished project
 :::
+
+### Introduction
 
 `Light-PHP` it's a Micro PHP framework easy to understand, to read and modify!  
 The target it's to create a PHP framework which makes possible start working without reading in massive documentations of highly complex professional frameworks.  
