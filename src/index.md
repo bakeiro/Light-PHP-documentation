@@ -12,6 +12,10 @@
 
 ### Introduction
 
+::: warning Education purposes
+Do not use it in production, not safe and unfinished project
+:::
+
 `Light-PHP` it's a Micro PHP framework easy to understand, to read and modify!  
 The target it's to create a PHP framework which makes possible start working without reading in massive documentations of highly complex professional frameworks.  
   
@@ -35,7 +39,7 @@ More info  [Github project](https://github.com/bakeiro/Light-PHP/)
 
 <img :class="$style.structure_img" src="./images/structure_png.png" alt="foo">
 
-### Welcome page
-After you start the web and database server, this is will be your welcome page:
+### Sample site
+After starting the web and database server, this is will be the welcome page:
 
 <img :class="$style.welcome_img" src="./images/welcomePage.png" alt="foo">

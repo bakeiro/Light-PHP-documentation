@@ -15,7 +15,8 @@ The folder structure follows the next schema:
 `admin/view`: templates + JS/CSS resources  
   
 ### System
-`system/`: Containing all the needed for the correct working of the framework  
+`system`: Containing all the needed for the correct working of the framework  
+`system/engine`: Framework engine  
 `system/config`: Includes all the configuration and routing files  
 `system/libraries`: Composer libraries  
 `system/logs`: Logs which stores the warnings and exceptions (if any)  
