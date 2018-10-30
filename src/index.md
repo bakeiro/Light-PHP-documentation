@@ -11,7 +11,7 @@
 # Light-PHP
 
 ::: warning Education purposes
-Do not use it in production, not safe and unfinished project
+Warning, unfinished project and not security proof, use at your risk!
 :::
 
 ### Introduction
