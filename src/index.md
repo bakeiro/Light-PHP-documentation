@@ -10,8 +10,9 @@
 
 # Light-PHP
 
-::: warning Education purposes
-Warning, unfinished project and not security proof, use at your risk!
+::: warning Disclaimer
+- The approach of this project is to create a framework-less site (with all features) using a simple and understandable structure
+- This project was not security tested, use at your own risk!
 :::
 
 ### Introduction
