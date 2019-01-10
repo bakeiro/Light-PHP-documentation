@@ -22,7 +22,7 @@ require(SYSTEM . 'engine/Url.php');
 require(SYSTEM . 'engine/Controller.php');
 require(SYSTEM . 'engine/Session.php');
 require(SYSTEM . 'engine/SessionHandler.php');
-require(SYSTEM . "engine/Output.php");
+require(SYSTEM . 'engine/Output.php');
 require(SYSTEM . 'engine/Database.php');
 require(SYSTEM . 'engine/Util.php');
 require(SYSTEM . 'engine/Errors.php');
@@ -30,7 +30,7 @@ require(SYSTEM . 'engine/SecModel.php');
 require(SYSTEM . 'engine/SecController.php');
 
 //Startup process
-require(SYSTEM. "start.php");
+require(SYSTEM. 'start.php');
 
 //Execute main function
 $Controller = new Controller();

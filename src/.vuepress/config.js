@@ -9,7 +9,7 @@ module.exports = {
 		nav: [
 		  	{ text: 'Home', link: '/' },
 		  	{ text: 'Github', link: 'https://github.com/bakeiro/Light-PHP' },
-			{ text: 'About me', link: 'https://davidbaqueiro.com' },
+			{ text: 'About me', link: 'https://davidbaqueiro.com' }
 		],
 
 		displayAllHeaders: true,
@@ -21,17 +21,17 @@ module.exports = {
 					['/overview/Overview', 'Overview'],
 					['/overview/Configuration', 'Configuration'],
 					['/overview/Routes', 'Routes'],
-					['/overview/Template', 'Template'],
-					['/overview/MoreInfo', 'More info']
+					['/overview/Template', 'Template']
 				]
 			},
 			{
-				title: 'Engine',
-				children: [
-					['/engine/engine_structure', 'Structure'],
-					['/engine/folder_structure', 'Folders'],
-					['/engine/database.md', 'Database']
-			  	]
+				title: 'Advanced',
+				children: [	
+					['/advanced/MoreInfo', 'More info'],
+					['/advanced/engine_structure', 'Structure'],
+					['/advanced/folder_structure', 'Folders'],
+					['/advanced/database', 'Database']
+				]
 			}
 		]
 	}
