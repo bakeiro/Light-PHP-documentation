@@ -5,31 +5,36 @@ Here you can see what does the entry point, how to write routes, and how the MVC
 ### index.php  
   
 ``` php
-//Require engine
-require('config.php');
-require(SYSTEM . 'engine/Config.php');
+//Define routes
+define('DIR_ROOT', 'C:/xampp/htdocs/framework_php/');
+define('SYSTEM', DIR_ROOT.'system/');
+define('MODEL', DIR_ROOT.'site/model/');
+define('CONTROLLER', DIR_ROOT.'site/controller/');
+define('VIEW', DIR_ROOT.'site/view/');
+
+//Require config files
+require(SYSTEM . "engine/Config.php");
+require(SYSTEM . "config/config_data.php");
+require(SYSTEM . "config/php_settings.php");
+
+//Import engine
 require(SYSTEM . 'engine/Url.php');
 require(SYSTEM . 'engine/Controller.php');
 require(SYSTEM . 'engine/Session.php');
+require(SYSTEM . 'engine/SessionHandler.php');
 require(SYSTEM . "engine/Output.php");
-require(SYSTEM . 'engine/Connection.php');
+require(SYSTEM . 'engine/Database.php');
 require(SYSTEM . 'engine/Util.php');
 require(SYSTEM . 'engine/Errors.php');
 require(SYSTEM . 'engine/SecModel.php');
 require(SYSTEM . 'engine/SecController.php');
 
-//Composer
-require(SYSTEM."libraries/vendor/autoload.php");
-
-//Startup processs
+//Startup process
 require(SYSTEM. "start.php");
 
-//Exec main controller
+//Execute main function
 $Controller = new Controller();
 $Controller->execController();
-
-//Close DB
-Connection::$CONN->close();
 ```  
   
 The basic working of the index.php file is:
@@ -37,21 +42,6 @@ The basic working of the index.php file is:
 - Startup the framework (getting the configuration, starting connection to the database etc)
 - Execute the main function (based on the url)
 - Close the db connection
-
-
-### Routes
-
-The routes are defined in `system/config/routes.php`, here defines an array key value, the key it's the seo-url (if exist) and the value is the controller's function to be executed:  
-
-This means that for a custom-url route is associated to a method from one controller class (MVC structure).  
-You can also don't write a custom url, and use index.php?route=info/info/welcome instead.
-
-::: tip Example yourwebsite.com/home
-routes.php:  `$routes["home"] = "info/info/welcome"`  
-`info/info/welcome` = `controller/info/infoController->welcome()`
-:::
-
-[Routes](./Routes.html) 
 
 
 # MVC Structure
@@ -93,3 +83,17 @@ class productModel{
 <h1>Product info</h1>
 <p>`{% prod["name"] %}`</p>
 ```
+
+# Routes
+
+The routes are defined in `system/config/routes.php`, here defines an array key value, the key it's the seo-url (if exist) and the value is the controller's function to be executed:  
+
+This means that for a custom-url route is associated to a method from one controller class (MVC structure).  
+You can also don't write a custom url, and use index.php?route=info/info/welcome instead.
+
+::: tip Example yourwebsite.com/home
+routes.php:  `$routes["home"] = "info/info/welcome"`  
+`info/info/welcome` = `controller/info/infoController->welcome()`
+:::
+
+[Routes](./Routes.html) 

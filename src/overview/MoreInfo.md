@@ -1,69 +1,37 @@
-# :scroll: more info
+# :scroll: More info
 
-### Startup
-The startup process it's located in `system/start.php`, in this process this is what happens.
-
-- Database connection is started
-- Url parsing (routes)
-- Starts the session
-- Sets error handlers
-- Loads composer libraries
-- Escape $_POST, $_GET, and $_COOKIE
-- Sets the "finished" flag (internal framework use)
-
-``` php
-
-//Database
-$temp_con = mysqli_connect(CONN_HOST, CONN_USER, CONN_PASS, CONN_DDBB);
-mysqli_set_charset($temp_con,"utf8");
-Connection::$CONN = $temp_con;
-
-//Url
-Url::init();
-
-//Loader
-Output::$scripts = array();
-Output::$styles = array();
-
-//Session
-Session::start();
-
-//Errors
-set_error_handler( array(new Errors(),"my_error_handler") ,E_ALL);
-error_reporting(E_ALL);
-
-//Composer
-require(SYSTEM."libraries/vendor/autoload.php");
-
-//escape $_POST,$_GET,$_COOKIE
-Util::cleanInput();
-
-//Engine finished
-Config::set("loaded", true);
-```
-
-### Dbug
+### Log files
 All the warnings/errors stays in `system/logs` in 2 files, `errors.log` for errors and `notice.log` for warnings and errors
+
+### Debug
+Enabling the debug feature (This can be done in `system/config/config_data.php` file) a debug console will pop up in every page, if any warning or exception is throw this will be show in the console (on the bottom of the page)
 
 ### Composer
 Composer it's integrated in this framework, it only load the used libraries since uses autoload.
 
+### NPM
+This framework it's also integrated with npm
+
 ### Upload folder
-The upload folder it's located in `system/upload` it's designed for uploading files for whatever use
+The upload folder it's located in `system/upload` it's designed for uploading files, (by default, can't execute scripts from outside stored here)
 
 ### Engine
-In the folder `system/engine` you can see the framework engine, the classes are quite simple, to could be editable (carefully...) to modify the behavior, the engine it's made from:
+In the folder `system/engine` you can see the framework [engine](./engine/engine_structure.html)
 
-- Config class (to access globally to important variables)
-- Connection, to define database connection, query function...
-- Controller, class which executes all the methods
-- Errors, class to manipulate exceptions
-- Output, class to process templates and load files
-- SecAdmin, SecController, SecModel are classes for the PHP security (basically, to not run any script before the engine is loaded, or not access the admin page without been logged)
-- Session, session manipulation
-- Url, for parsing the url and finding the routes
-- Util, Usefull functions
+### Security implementations:
+- Session id fixation
+- Session hijacking
+- Xss attacks
+- SQL injections
+- Can't exec scripts outside the framework
+- Only the JS/CSS/Images resources are accesible from outside
+- Pass encryption in the Database
+- Session data encryption
 
+### Cache
+All the HTML, CSS, JavaScript, Text, XML and fonts resources are compressed by default using `.htaccess` file (apache)
 
-### NPM
-This framework also includes a npm
+### Cache control
+You can define a version number for the `JS/CSS` resources, so, every time you make an update you just change the cache number, and the user's browser will make a fresh download of these resources.
+(Basically, all the resources ends with `?v={%cache_number}`, changing this number makes the browser think it needs to download a different file)
+

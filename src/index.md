@@ -11,8 +11,9 @@
 # Light-PHP
 
 ::: warning Disclaimer
-- The approach of this project is to create a framework-less site (with all features) using a simple and understandable structure
-- This project was not security tested, use at your own risk!
+- This was made by me as a personal project (basically to prove myself and learning).
+- This might not be 100% secure, use at your own risk!, any feedback about security or structure is welcome ;)
+- This framework comes with a sample site, this site doesn't pretend to be complete (don't expect a full featured project), it's just a sample of how works this framework.
 :::
 
 ### Introduction
@@ -28,11 +29,15 @@ More info  [Github project](https://github.com/bakeiro/Light-PHP/)
 
 ### Features
 
-- Powerful
-- Fast
-- Simple
-- Shelf explained code
-- Ready to deploy
+- MVC structure
+- Micro template engine
+- Database abstraction
+- Session management
+- Debug PHP console
+- Admin panel
+- Seo urls
+- Integrated with Npm and Composer
+- Much more!
 
 [Documentation](./overview/Overview.html) 
 

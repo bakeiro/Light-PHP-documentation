@@ -1,14 +1,11 @@
 # :art: Templates
 
-Light-PHP uses a custom template engine, this template is hosted here [template engine](https://github.com/bakeiro/micro_php_template_engine/) this is a basic class supporting:
+Light-PHP uses a very tiny and simple [template engine](https://github.com/bakeiro/micro_php_template_engine/), this is how to use it:
 
 - `{%variable_name%}` = `<?php echo $variable_name ?>`
-- `@if($var > 5){` = ` <?php if($var > 5) { ?>`  
 
 
 ``` php
-	@if(user_info){
-		<p>{% user_name %}</p>
-		<p>{% user_addresss %}</p>
-	@endif
+	<p>{% user_name %}</p>
+	<p>{% user_addresss %}</p>
 ```

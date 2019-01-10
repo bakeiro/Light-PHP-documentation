@@ -1,22 +1,20 @@
 # :gear: Configuration
 
-We have 3 files:
-- `config.php`
+There are 2 configuration files, these files are inside `system/config` folder:
 - `config_data.php`
 - `php_settings.php`
 
-### config.php
-`config.php` Most basic configuration file, here defines the database connection and the folder paths.
-
 ### config_data.php
-`system/config/config_data.php` Here you can configurate the framework variables like:
+This file defines the global variables that will be used later in the framework, examples are
 
-- the FTP
-- Email
-- Dbugging
-- Session
-- Cache
-- More
+- enable debug console
+- email credentials
+- database credentials...)
+- Other settings
 
 ### php_settings
-`system/config/php_settings.php` All the init_set functions
+All the init_set functions, examples:
+
+- ini_set('display_errors', 'On');
+- ini_set('session.cookie_lifetime', 0);
+- ini_set('session.gc_maxlifetime', 14400);

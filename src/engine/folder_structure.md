@@ -2,22 +2,21 @@
 
 The folder structure follows the next schema:
 
-### Main site
-`site/`: main site folder, containing the MVC structure  
- `site/model`: Database queries for the user site  
- `site/controller`: methods for the user site  
- `site/view`: containing the PHP templates + the JS/CSS files, it's also integrated with npm
+### Main folders
+There are two main folders, each of them with a MCV structure
+`site`: Stores the customer's site (what the user can access)
+`admin`: Stores the administration panel for admins
 
-### Admin
-`admin/`: containing the administration site  
-`admin/controller`: controller files for the administration site  
-`admin/model`: model files site  
-`admin/view`: templates + JS/CSS resources  
-  
+### MVC structure
+This structure is repeated in the `admin` and in the `site` folders (just for clarity) 
+`model`: Database queries for the user site  
+`controller`: Controller functions for the user site  
+`view`: containing the PHP templates + the JS/CSS/Images files  
+
 ### System
 `system`: Containing all the needed for the correct working of the framework  
-`system/engine`: Framework engine  
 `system/config`: Includes all the configuration and routing files  
+`system/engine`: Framework engine  
 `system/libraries`: Composer libraries  
 `system/logs`: Logs which stores the warnings and exceptions (if any)  
-`system/upload`: Folder to upload content  
+`system/upload`: Folder to upload content    

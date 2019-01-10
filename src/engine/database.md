@@ -1,6 +1,6 @@
 # :package: Database  
 
-The Light-PHP project come with a simple database, here is it's structure:
+The Light-PHP project come with a sample database (since it comes with a sample site), here is it's structure:
 
 
 | Customer |    User       |
