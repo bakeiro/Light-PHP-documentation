@@ -1,6 +1,5 @@
 # :mag: Engine  
 
-### System/engine folder
 Here I explain how the engine works, and for what is used every class:
 
 - `Config:` Class for Getting/setting values, this is used universal variables which are accesible through the framework (ex: emails account, ftp folder, database credentials...)

@@ -19,18 +19,18 @@ module.exports = {
 				collapsable: false,
 				children: [
 					['/overview/Overview', 'Overview'],
+					['/overview/Routing', 'Routing'],
 					['/overview/Configuration', 'Configuration'],
-					['/overview/Routes', 'Routes'],
-					['/overview/Template', 'Template']
+					['/overview/Template', 'Template'],
+					['/overview/Folders', 'Folders']
 				]
 			},
 			{
 				title: 'Advanced',
 				children: [	
 					['/advanced/MoreInfo', 'More info'],
-					['/advanced/engine_structure', 'Structure'],
-					['/advanced/folder_structure', 'Folders'],
-					['/advanced/database', 'Database']
+					['/advanced/Engine', 'Engine'],
+					['/advanced/Database', 'Database']
 				]
 			}
 		]

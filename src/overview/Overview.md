@@ -1,12 +1,12 @@
 # :earth_africa: Overview
-Basic overview, here I display the basic information of this framework.  
-Here you can see what does the entry point, how to write routes, and how the MVC structure works.
+Here I display the basic information of this framework.  
+Here you can see what does the entry point (index.php), MVC structure, and how the routes works.
 
 ### index.php  
   
 ``` php
 //Define routes
-define('DIR_ROOT', 'C:/xampp/htdocs/framework_php/');
+define('DIR_ROOT', 'C:/path/yourProjectName/');
 define('SYSTEM', DIR_ROOT.'system/');
 define('MODEL', DIR_ROOT.'site/model/');
 define('CONTROLLER', DIR_ROOT.'site/controller/');
@@ -37,17 +37,17 @@ $Controller = new Controller();
 $Controller->execController();
 ```  
   
-The basic working of the index.php file is:
-- Always get the basic resources for working (the engine and composer)
-- Startup the framework (getting the configuration, starting connection to the database etc)
-- Execute the main function (based on the url)
-- Close the db connection
-
+What does the index.php file?
+- Define the paths
+- Get the basic resources (config + engine)
+- Startup process (get the settings, load libraries etc)
+- Execute the main function (This is where the MCV happens)
 
 # MVC Structure
-Now I display how looks the basic MVC structure in this framework
+Here I display an example of how the structure works
 
-### Controller
+### Controller 
+`site/controller/product/productController.php`
 
 ``` php
 class productController{
@@ -56,7 +56,7 @@ class productController{
 
 		$prod_id = $_GET["prod_id"]; //Already escaped
 
-		require(MODEL."product/product.php");
+		require(MODEL."product/product.php"); //MODEL is defined in index.php
 		$product_model = new productModel();
 
 		$data = array();
@@ -68,32 +68,31 @@ class productController{
 ```
 
 ### Model
-
+`site/model/product/productModel.php`
 ``` php
 class productModel{
 	public function getProd($id){
-		return Connection::query("SELECT * FROM `product` WHERE id = ".$id);
+		return Database::query("SELECT * FROM `product` WHERE id = ".$id);
 	}
 }
 ```
 
 ### View
-
+`site/view/template/product/productView.php`
 ``` html
 <h1>Product info</h1>
-<p>`{% prod["name"] %}`</p>
+<p>{% prod["name"] %}</p>
+<p>{% prod["description"] %}</p>
 ```
 
-# Routes
+# Routing
+Light-PHP provides a simple routing system by default, which consist in write the route in the GET parameter to define the controller's function to be executed.  
+The value of the route follows an internal structure to point the file, class and method to execute. (`folder/className/method`)
 
-The routes are defined in `system/config/routes.php`, here defines an array key value, the key it's the seo-url (if exist) and the value is the controller's function to be executed:  
+Example:  
+`yourpage.com/index.php?route=product/product/getProduct&prod_id=1`  
+Will execute the the method getProduct, in the productController class, inside the site/controller/product folder.
 
-This means that for a custom-url route is associated to a method from one controller class (MVC structure).  
-You can also don't write a custom url, and use index.php?route=info/info/welcome instead.
+In case you want to define seo-friendly urls, you can define them in `system/config/routes.php`.
 
-::: tip Example yourwebsite.com/home
-routes.php:  `$routes["home"] = "info/info/welcome"`  
-`info/info/welcome` = `controller/info/infoController->welcome()`
-:::
-
-[Routes](./Routes.html) 
+More info [here](./Routing.html) 
