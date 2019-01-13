@@ -6,7 +6,7 @@ Here I explain how the engine works, and for what is used every class:
 - `Controller:` Class which executes the main function (this function is based on the Url)
 - `Database:` Class to abstract the database, is used to execute queries and other useful methods
 - `Errors:` Defines how to act in case any Warning/Exception happens
-- `Output:` Outputs and process the template. 
+- `Output:` Process and outputs the template. 
 - `SecAdmin/SecController/SecModel:` Basic security class
 - `Session:` Session management
 - `SessionHandler:` Session handler (defines the session behavior)
@@ -17,15 +17,16 @@ Here I explain how the engine works, and for what is used every class:
 ### Startup process
 The startup process it's located in `system/start.php`, in this process this is what happens.
 
-- Database connection is started
+- Loads composer libraries
+- Sets error handlers
+- Establishes the Database connection
 - Url parsing (routes)
 - Starts the session
-- Sets error handlers
-- Loads composer libraries
-- Escape $_POST, $_GET, and $_COOKIE
-- Sets the "finished" flag (internal framework use)
+- Escape  and trim() the $_POST, $_GET data
+- Sets the "finished" flag (internal framework use)	
 
 ``` php
+
 //Composer
 require(SYSTEM."libraries/vendor/autoload.php");
 
@@ -55,14 +56,4 @@ Util::cleanInput();
 
 //Engine finished
 Config::set("loaded", true);
-
-//Finish script functions
-register_shutdown_function(function(){
-	//Session::$handler->close(); //Closes session handler
-});
-
-register_shutdown_function(function(){
-	//Database::$CONN->close();//Closes db Database
-	//$pdo->query('SELECT pg_terminate_backend(pg_backend_pid());');
-});
 ```

@@ -7,9 +7,9 @@ There are 2 configuration files, these files are inside `system/config` folder:
 ### config_data.php
 This file defines the global variables that will be used later in the framework, examples are
 
-- enable debug console
-- email credentials
-- database credentials...)
+- Enable/disable debug console
+- Email credentials
+- Database credentials
 - Other settings
 
 ### php_settings
