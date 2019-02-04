@@ -2,10 +2,18 @@
 
 Light-PHP uses a very tiny and simple [template engine](https://github.com/bakeiro/micro_php_template_engine/), this is how to use it:
 
-- `{%variable_name%}` = `<?php echo $variable_name ?>`
+Simply put the {{}} surrounding the variable name to output the value
 
 
+### Before:
 ``` php
-	<p>{% user_name %}</p>
-	<p>{% user_addresss %}</p>
+	<p><?php echo $user_name ?></p>
+	<p><?php echo $user_address ?></p>
+```
+
+
+### After:
+``` html
+	<p>{{user_name}}</p>
+	<p>{{user_addresss}}</p>
 ```
