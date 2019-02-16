@@ -9,8 +9,8 @@
 
 ::: warning Disclaimer
 - This was made by me as a personal project to prove myself, learning and have a very simple tool to work with.
-- This might not be 100% secure, use at your own risk!
 - Any pull request/feedback is welcome ;)
+- This might not be 100% secure!
 :::
 
 ### Introduction
