@@ -2,20 +2,22 @@
 
 Light-PHP provides a simple routing system, it consist in put the controller's function to be executed in the ?route GET parameter, inside the url.  
 
+`domain/index.php?route=info/info/welcome`
+
 This value follows an internal structure to point the file, class and method to execute (`folder/className/method`)
 If the method argument is missing Light-PHP will take index() function as default method 
 
 ### Examples
 
 ::: tip index.php?route=info/info/welcome
-Method: `info/infoController->welcome()`  
-File: `controller/info/info`  
+Method: `infoController->welcome()`  
+File: `controller/info/info (infoController.php)`  
 Class: `infoController`
 :::
 
 ::: tip index.php?route=product/product
-Method: `product/productController->index()`  
-File: `controller/product/product`  
+Method: `productController->index()`  
+File: `controller/product/product (productController.php)`  
 Class: `productController`  
 :::
 

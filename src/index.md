@@ -8,9 +8,9 @@
 # Light-PHP
 
 ::: warning Disclaimer
-- This was made by me as a personal project (basically to prove myself and learning).
-- This might not be 100% secure, use at your own risk!, any feedback about security or structure is welcome ;)
-- This framework comes with a sample site, this site doesn't pretend to be complete (don't expect a full featured project), it's just a sample of how works this framework.
+- This was made by me as a personal project to prove myself, learning and have a very simple tool to work with.
+- This might not be 100% secure, use at your own risk!
+- Any pull request/feedback is welcome ;)
 :::
 
 ### Introduction
@@ -42,6 +42,6 @@ More info  [Github project](https://github.com/bakeiro/Light-PHP/)
 <img :class="$style.structure_img" src="./images/structure_png.png" alt="foo">
 
 ### Sample site
-After starting the web and database server, this is will be the welcome page:
+After starting the web and database server, you will see the sample site, this site is an example of how to do a project using this framework
 
 <img src="./images/welcomePage.png" alt="foo">

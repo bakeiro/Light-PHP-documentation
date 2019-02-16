@@ -17,3 +17,9 @@ Simply put the {{}} surrounding the variable name to output the value
 	<p>{{user_name}}</p>
 	<p>{{user_addresss}}</p>
 ```
+
+### Load template
+
+To load the template with the variables you just use the `Output::load();`  
+  
+`Output::load("folder/templateName", $array_with_data);`

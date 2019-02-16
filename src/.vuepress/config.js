@@ -20,8 +20,9 @@ module.exports = {
 				children: [
 					['/overview/Overview', 'Overview'],
 					['/overview/Routing', 'Routing'],
-					['/overview/Configuration', 'Configuration'],
 					['/overview/Template', 'Template'],
+					['/overview/Database', 'Database'],
+					['/overview/Configuration', 'Configuration'],
 					['/overview/Folders', 'Folders']
 				]
 			},
@@ -30,7 +31,7 @@ module.exports = {
 				children: [	
 					['/advanced/MoreInfo', 'More info'],
 					['/advanced/Engine', 'Engine'],
-					['/advanced/Database', 'Database']
+					['/advanced/StartUpProcess', 'Start up process']
 				]
 			}
 		]
