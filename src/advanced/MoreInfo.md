@@ -43,7 +43,7 @@ The `$_GET`, `$_POST` are escaped by default, you can check `Util::cleanInput` (
 - Only the JS/CSS/Images resources are accesible from outside
 - Pass encryption in the Database
 - Session data encryption
-- [You need to implement manually the CSRF token in every form, you can use Util::generateCSRFToken]
+- CSRF token [You need to disable 'allow_forms_without_csrf_token' in the config file and implement manually the CSRF token in every form, you can use Session::get("CSRF_input")
 
 
 <!--
