@@ -18,6 +18,7 @@ module.exports = {
 				title: 'Introduction',
 				collapsable: false,
 				children: [
+					['/overview/Installation', 'Installation'],
 					['/overview/Overview', 'Overview'],
 					['/overview/Routing', 'Routing'],
 					['/overview/Template', 'Template'],

@@ -44,6 +44,7 @@ The `$_GET`, `$_POST` are escaped by default, you can check `Util::cleanInput` (
 - Pass encryption in the Database
 - Session data encryption
 - CSRF token [You need to disable 'allow_forms_without_csrf_token' in the config file and implement manually the CSRF token in every form, you can use Session::get("CSRF_input")
+- Easily enable/disable debug info (for disabling this in production environments)
 
 
 <!--
