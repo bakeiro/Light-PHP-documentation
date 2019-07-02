@@ -46,13 +46,13 @@ The `$_GET`, `$_POST` are escaped by default, you can check `Util::cleanInput` (
 - CSRF token [You need to disable 'allow_forms_without_csrf_token' in the config file and implement manually the CSRF token in every form, you can use Session::get("CSRF_input")
 - Easily enable/disable debug info (for disabling this in production environments)
 
+# Roadmap
 
-<!--
-If you want to extend this project I suggest to integrate with `PHP-auth`, this library solves a lot of problems.
-It provides session security, login security and more stuff like forget password function, remember me cookie and much more!
--->
-
-<!--
-### Api controller
-Inside the site/controller/api you have the restController, this is useful when you have a model which gets data from the database and you just want to get that data in JSON, to do so, you put
--->
+- Implement a cache system to render the page directly instead calling controller
+- Improve debug console
+- Implement PSR-1 and PSR-2
+- Implement PHPUnit (maybe??)
+- Improve documentation
+- Add Install script
+- Add an class for security and permissions?
+- Maybe update the query function to make possible a rollback if the query fail

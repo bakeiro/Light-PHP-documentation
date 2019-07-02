@@ -28,8 +28,9 @@ For every custom url is associated a method from one controller class.
 
 ``` php
 $routes = array();
-$routes["welcome"] = "info/info/welcome"  
-$routes["product"] = "product/product"
+$routes["/"] = "info/info/welcome" 
+$routes["/welcome"] = "info/info/welcome"  
+$routes["/product"] = "product/product"
 ```
 
 With this, `yourdomain.com/welcome` will execute `info/infoController->welcome()`
