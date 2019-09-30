@@ -48,11 +48,4 @@ The `$_GET`, `$_POST` are escaped by default, you can check `Util::cleanInput` (
 
 # Roadmap
 
-- Implement a cache system to render the page directly instead calling controller
-- Improve debug console
-- Implement PSR-1 and PSR-2
-- Implement PHPUnit (maybe??)
-- Improve documentation
-- Add Install script
-- Add an class for security and permissions?
-- Maybe update the query function to make possible a rollback if the query fail
+[Roadmap](https://github.com/bakeiro/Light-PHP/projects)
