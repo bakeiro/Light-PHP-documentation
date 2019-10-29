@@ -24,14 +24,16 @@ module.exports = {
 					['/overview/Template', 'Template'],
 					['/overview/Database', 'Database'],
 					['/overview/Configuration', 'Configuration'],
-					['/overview/Folders', 'Folders']
+                    ['/overview/Folders', 'Folders'],
+                    ['/overview/Faq', 'FAQ']
 				]
 			},
 			{
 				title: 'Advanced',
 				children: [	
-					['/advanced/MoreInfo', 'More info'],
 					['/advanced/Engine', 'Engine'],
+                    ['/advanced/MoreInfo', 'More info'],
+                    ['/advanced/DebugConsole', 'Debug console'],
 					['/advanced/StartUpProcess', 'Start up process']
 				]
 			}

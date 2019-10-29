@@ -3,9 +3,6 @@
 ### Log files
 All the warnings/errors stays in `system/logs` in 2 files, `errors.log` for errors and `notice.log` for warnings and errors, the function triggered when a exception happens it's in `system/engine/Errors.php`
 
-### Debug console
-Enabling the debug feature (This can be done in `system/config/config_data.php` file) a debug console will pop up in every page, if any warning or exception is throw this will be show in the console (on the bottom of the page)
-
 ### Debug whoops
 Enabling this setting will launch the whoop debug info page anytime an exception happens
 
