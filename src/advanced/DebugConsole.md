@@ -19,7 +19,7 @@ The other tab, displays all the server info available (PHP version, php.ini file
 ### Console tabs
 <img :class="$style.shadow_img" src="../images/console_explanation.png" alt="foo">  
 
-## Debug tab    
+### Debug tab    
 Sample controller
 
 ``` php
