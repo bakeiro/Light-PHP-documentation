@@ -9,3 +9,7 @@ example:
 $params = array(":prod_name"=>$prod_name);  
 return Database::query("SELECT * FROM product WHERE product_name = :prod_name", $params);
 ```
+
+::: tip
+Update `config.php` for initialize database at startup process
+:::

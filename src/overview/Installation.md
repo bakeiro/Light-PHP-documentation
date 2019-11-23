@@ -1,11 +1,12 @@
-# Installation
+# Installation:
 
-- [Download last version](https://github.com/bakeiro/Light-PHP/releases)
-- Start web server and database server  
+``` bash
+composer create-project bakeiro/light-php
+```
 
-### Optional
-- Import `database.sql` if wanna run the full demo site
-- Edit `config.php` for setting up:
+### Setting up project
+- Edit `config.php` for
+    - Initialize Database at start up
     - Database credentials
     - Session pass (recommended for security)
     - Email credentials
