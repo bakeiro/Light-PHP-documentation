@@ -8,24 +8,22 @@
 
 ### Introduction
 
-`Light-PHP` it's a Micro PHP framework easy to understand, to read and modify!  
-The target it's to create a PHP framework which makes possible start working without reading in massive documentations of highly complex professional frameworks.  
-  
-This framework comes with a sample website including all the basic things (`login`, `database structure`, `session management`, `navbar`, `admin panel`...), and also not so simple features (`password encryption/decryption`, `router with SEO urls`...) and much more!. 
- 
-So if you start a project you don't have to start from the beginning, just start adapting your project to the sample site so a part of work is done!  
+`Light-php` it's a really simple yet powerful framework which makes possible to start working without reading massive documentations, so you can focus in the application development and you can understand how the framework works thanks to it's easy MVC structure.  
+
+Yet it looks simple, this project follows the `PSR-0`, `PSR-1` and `PSR-4` standards, good coding practices, MVC structure, dependency injection, CI with github actions and much more!, so this implements the recommended way to develop apps instead of create an "alternative" way to develop apps.  
 
 More info  [Github project](https://github.com/bakeiro/Light-PHP/)
 
 ### Features
 
 - MVC structure
+- PSR1, PSR4, PHPDoc
+- PHP CI, JS CI with github actions
 - Micro template engine
 - Database abstraction
 - Seo urls
-- Session management
+- Session encryption
 - Debug PHP console
-- Admin panel
 - Integrated with Npm and Composer
 - Security implementations
 - Much more!
@@ -34,7 +32,7 @@ More info  [Github project](https://github.com/bakeiro/Light-PHP/)
 
 ### Structure
 
-<img :class="$style.structure_img" src="./images/structure_png.png" alt="foo">
+<img :class="$style.structure_img" src="./images/structure_png_new.png" alt="foo">
 
 ### Sample site
 After starting the web and database server, you will see the sample site, this site is an example of how to do a project using this framework

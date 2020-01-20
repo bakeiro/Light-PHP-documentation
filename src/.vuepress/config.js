@@ -21,10 +21,12 @@ module.exports = {
 					['/overview/Installation', 'Installation'],
 					['/overview/Overview', 'Overview'],
 					['/overview/Routing', 'Routing'],
-					['/overview/Template', 'Template'],
 					['/overview/Database', 'Database'],
-					['/overview/Configuration', 'Configuration'],
-                    ['/overview/Folders', 'Folders'],
+                    ['/overview/Template', 'Template'],
+                    ['/overview/Session', 'Session'],
+                    ['/overview/Util', 'Util'],
+					['/overview/Config', 'Config'],
+                    ['/overview/DebugConsole', 'Debug console'],
                     ['/overview/Faq', 'FAQ']
 				]
 			},
@@ -33,8 +35,9 @@ module.exports = {
 				children: [	
 					['/advanced/Engine', 'Engine'],
                     ['/advanced/MoreInfo', 'More info'],
-                    ['/advanced/DebugConsole', 'Debug console'],
-					['/advanced/StartUpProcess', 'Start up process']
+                    ['/advanced/ErrorHandler', 'Error handler'],
+                    ['/advanced/StartUpProcess', 'Start up process'],
+                    ['/advanced/Security', 'Security']
 				]
 			}
 		]
