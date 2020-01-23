@@ -38,14 +38,6 @@ module.exports = {
                     ['/advanced/ErrorHandler', 'Error handler'],
                     ['/advanced/StartUpProcess', 'Start up process'],
                     ['/advanced/Security', 'Security']
-				],
-				title: 'Coobook',
-				children: [	
-					['/cookbook/ErrorHandling', 'Error handling'],
-                    ['/advanced/MoreInfo', 'More info'],
-                    ['/advanced/ErrorHandler', 'Error handler'],
-                    ['/advanced/StartUpProcess', 'Start up process'],
-                    ['/advanced/Security', 'Security']
 				]
 			}
 		]
