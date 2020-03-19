@@ -14,16 +14,17 @@ Yet it looks simple, this project follows the `PSR-0`, `PSR-1` and `PSR-4` stand
 
 More info  [Github project](https://github.com/bakeiro/Light-PHP/)
 
-### Features
+### Top features
 
+- Really easy to use and learn
 - MVC structure
-- PSR1, PSR4, PHPDoc
-- PHP CI, JS CI with github actions
 - Micro template engine
 - Database abstraction
 - Seo urls
 - Session encryption
+- PSR1, PSR4, PHPDoc
 - Debug PHP console
+- PHP CI, JS CI with github actions
 - Integrated with Npm and Composer
 - Security implementations
 - Much more!

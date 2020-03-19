@@ -1,19 +1,47 @@
 # :earth_africa: Overview
 
-Here I display an example of how the MVC structure works in this framework
+### Light-PHP structure
+Here I will show you how to understand and develop a simple MVC page using Light-PHP framework, and explaining how to organize the code.  
+All the code it's located in the `src` folder, you will be working here the 99% percent of the time (unless you are modifying the core of the framework).  
+The code it's organized in modules, and each of the modules it's divided in the `controller`, `model` and `view` folder respectivamente.  
+
+### Modules example:  
+```
+   src/
+    ├─ controller
+    │  ├─ product
+    │  │     ├─ productController.php
+    │  │     └─ priceController.php
+    │  └ user
+    │       └─ userController.php
+    |
+    ├─ model
+    │  └─ product
+    │       ├─ productModel.php
+    │       └─ priceModel.php
+    └─ view
+       └─ template
+            └─ product
+                └─ productView.php
+```
+In this example you can see 2 modules, `product` and `user` module. The most basic module it's made of a single file controller, but it can be a Controller and a Model (very common in API apps) or it can include a View, if you output the template from PHP.  
+In every folder contains all the files needed to use that module, as you can see product need to files, this is done just simple organization.  
+
+### Creating your first page:  
 
 ### Controller 
-`site/controller/product/productController.php`
+`src/controller/product/productController.php`
 
 ``` php
-class productController{
+namespace Controller;
 
-	public function getProduct(){
+class ProductController
+{
+    public function getProduct()
+    {
+		$prod_id = $_GET["prod_id"]; // Already escaped
 
-		$prod_id = $_GET["prod_id"]; //Already escaped
-
-		require(MODEL."product/productModel.php"); //MODEL constant is defined in index.php
-		$product_model = new productModel();
+        $product_model = new Model\productModel(); // Autoload magic ;)
 
 		$data = array();
 		$data["prod"] = $product_model->getProd($prod_id);
@@ -24,33 +52,37 @@ class productController{
 ```
 
 ### Model
-`site/model/product/productModel.php`
+`src/model/product/productModel.php`
 ``` php
-class productModel{
+namespace Model;
 
-	public function getProd($id){
-		return Database::query("SELECT * FROM `product` WHERE id = :id", array("id"=>$id));
+class ProductModel
+{
+    public function getProd($id)
+    {
+		return Database::query("SELECT * FROM `product` WHERE id = :id", array("id" => $id));
 	}
-	
 }
 ```
 
 ### View
-`site/view/template/product/productView.php`
+`src/view/template/product/productView.php`
 ``` html
 <h1>Product info</h1>
 <p>{{ prod["name"] }}</p>
 <p>{{ prod["description"] }}</p>
 ```
 
-# Routing
-Light-PHP provides a simple routing system by default, which consist in write the route in the GET parameter to define the controller's function to be executed.  
-The value of the route follows an internal structure to point the file, class and method to execute. (`folder/className/method`)
+### Routing
+`system/config/routes.php`
+``` php
+$routes = array();
+$routes["/product_info"] = "product/product/getProduct"
+```
 
-Example:  
+### Example:  
 `yourpage.com/index.php?route=product/product/getProduct&prod_id=1`  
-Will execute the the method getProduct, in the productController class, inside the site/controller/product folder.
+`yourpage.com/product_info&prod_id=1`  
 
-In case you want to define seo-friendly urls, you can define them in `system/config/routes.php`.
-
-More info [here](./Routing.html) 
+### That's all!
+There you go, you have just built a MCV page in less than 5 minutes.

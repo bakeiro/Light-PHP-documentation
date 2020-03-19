@@ -1,11 +1,13 @@
 # :truck: Routing
 
-Light-PHP provides a simple routing system, it consist in put the controller's function to be executed in the ?route GET parameter, inside the url.  
+Light-PHP provides a simple routing system, it consist in put the controller's function to be executed in the route GET parameter, like this:  
+`yourdomain.com/index.php?route=product/price/showPrice`
 
-`domain/index.php?route=info/info/welcome`
+Where the route value means the folder, then the controller class name and then the method (`Folder/ClassName/Method`) in this case the:  
 
-This value follows an internal structure to point the file, class and method to execute (`folder/className/method`)
-If the method argument is missing Light-PHP will take index() function as default method 
+`product` product folder  
+`price` priceController class  
+`showPrice` showPrice() method  
 
 ### Examples
 
@@ -15,8 +17,8 @@ File: `controller/info/info (infoController.php)`
 Class: `infoController`
 :::
 
-::: tip index.php?route=product/product
-Method: `productController->index()`  
+::: tip index.php?route=product/product/showProductInfo
+Method: `productController->showProductInfo()`  
 File: `controller/product/product (productController.php)`  
 Class: `productController`  
 :::
@@ -30,19 +32,8 @@ For every custom url is associated a method from one controller class.
 $routes = array();
 $routes["/"] = "info/info/welcome" 
 $routes["/welcome"] = "info/info/welcome"  
-$routes["/product"] = "product/product"
+$routes["/product"] = "product/product/showProductInfo"
+$routes["/product_price"] = "product/price/showPrice"
 ```
 
 With this, `yourdomain.com/welcome` will execute `info/infoController->welcome()`
-
-### Examples
-
-::: tip domain/welcome  
-`$routes["welcome"] = "info/info/welcome"`  
-`info/infoController->welcome()`
-:::
-
-::: tip domain/product  
-`$routes["product"] = "product/product"`  
-`product/productController->index()`
-:::

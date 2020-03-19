@@ -1,18 +1,21 @@
 # :gear: Configuration
+The configuration of this framework it's located under the `system/config` directory, there you can modify the framework settings, php settings and the custom urls.  
 
-All the framework configuration goes inside the `config.php` file, this is in the root directory
-
-### config.php
-This file defines the global variables that will be used later in the framework, examples are
+### Framework settings
+This can be modified inside the [`system/config/settings.php`](https://github.com/bakeiro/Light-PHP/blob/master/system/config/settings.php) file, this file consist in a bunch of global variables used by the framework, some settings are:
 
 - Enable/disable debug console
 - Email credentials
 - Database credentials
 - Other settings
 
-### php.ini
-There is also the `php.ini` file in case you need to edit any server settings
+### Php settings
+Located in [`system/config/php_ini.php`](https://github.com/bakeiro/Light-PHP/blob/master/system/config/php_ini.php) file, here, you can modify the php ini setting (php_set()), by default, most common settings are sett for generic applications, some examples are:
 
 - display_errors = On;
+- session.auto_start = Off
 - session.cookie_lifetime = 0;
-- session.gc_maxlifetime = 14400;
+- session.default_charset = UTF-8;
+
+### Custom url
+Inside the [`system/config/routes.php`](https://github.com/bakeiro/Light-PHP/blob/master/system/config/routes.php) file, you can create, edit and remove the custom url, in case you want to create a seo friendly urls, more info [here](/overview/Routing.html) 

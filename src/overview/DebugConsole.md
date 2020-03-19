@@ -10,7 +10,7 @@
     }
 </style>
 
-# :milky_way: Debug console  
+# :ant: Debug console  
 Light's PHP debug console is a tool designed for debugging information and to solve errors and exceptions easily.  
 
 This tool is divided in two tabs, one displays all the debug info produced after the main execution (collecting warnings, exceptions, database queries and custom messages!)  
