@@ -20,4 +20,4 @@ This structure is repeated in the `admin` and in the `site` folders (I separate 
 `system/engine`: Framework engine  
 `system/libraries`: Composer libraries  
 `system/logs`: Logs which stores the warnings and exceptions (if any)  
-`system/upload`: Folder to upload content    
+`system/upload`: Folder to upload content

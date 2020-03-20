@@ -1,17 +1,18 @@
 # :gear: Engine  
 
-Here I explain how the engine works, and for what is used every class:
 
-- `Config:` Class for Getting/setting values, this is used universal variables which are accesible through the framework (ex: emails account, ftp folder, database credentials...)
-- `Controller:` Class which executes the main function (this function is based on the Url)
-- `Database:` Class to abstract the database, is used to execute queries and other useful methods
-- `Errors:` Defines how to act in case any Warning/Exception happens
-- `Output:` Process and outputs the template. 
-- `SecAdmin/SecController/SecModel:` Basic security class
-- `Session:` Session management
-- `SessionHandler:` Session handler (defines the session behavior)
-- `Url:` Url parser
-- `Util:` Useful functions (ex: generate token, delete empty spaces from a string, scape string etc)
+### System folder structure:  
+```
+ system/
+    ├─ composer
+    ├─ config
+    ├─ engine
+    ├─ library
+    └─ writable
+```
 
-
-All the engine files (Except secAdmin/secController/secModel) are static classes with static functions you can use along the framework (like `Output::load()`, `Database::query()` or `Util::generateToken()`).
+- `composer:` Folder that includes all the composer dependencies and libraries
+- `config:` Here you can edit the routes, framework settings and the php ini settings
+- `engine:` This folder includes all the basic php files for running the framework, without one of this files the framework can't run
+- `library:` Here includes the dependencies that make everything easier, like database, session, template, useful functions etc
+- `writable:` This folder it's designed to store all the files, that change dynamically, like logs, cache, session in files (if the case) and more.

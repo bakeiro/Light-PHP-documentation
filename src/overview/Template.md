@@ -23,3 +23,9 @@ To load the template with the variables you just use the `Output::load();`
 ```
 
 ### Load template
+In case you want to get the template as string and don't output it, you can use the method `loadTemplate()` which returns the compiled template as string
+
+### Adding JS and CSS
+In case you want to add JS and CSS files from PHP (for dynamic pages for example) you can use `addJS()` and `addCSS()` before loading the template
+
+[Template code](https://github.com/bakeiro/Light-PHP/blob/master/system/library/Output.php)

@@ -37,3 +37,5 @@ $routes["/product_price"] = "product/price/showPrice"
 ```
 
 With this, `yourdomain.com/welcome` will execute `info/infoController->welcome()`
+
+[Router code](https://github.com/bakeiro/Light-PHP/blob/master/system/engine/Router.php)

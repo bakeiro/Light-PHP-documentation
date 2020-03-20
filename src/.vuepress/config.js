@@ -30,7 +30,8 @@ module.exports = {
 			{
 				title: 'Advanced',
 				children: [	
-					['/advanced/Engine', 'Engine'],
+                    ['/advanced/Engine', 'Engine'],
+                    ['/advanced/ErrorLoggin', 'Error logs'],
                     ['/advanced/MoreInfo', 'More info'],
                     ['/advanced/StartUpProcess', 'Start up process'],
                     ['/advanced/Security', 'Security']
