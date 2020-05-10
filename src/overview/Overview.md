@@ -3,7 +3,7 @@
 ### Light-PHP structure
 Here I will show you how to understand and develop a simple MVC page using Light-PHP framework, and explaining how to organize the code.  
 All the code it's located in the `src` folder, you will be working here the 99% percent of the time (unless you are modifying the core of the framework).  
-The code it's organized in modules, and each of the modules it's divided in the `controller`, `model` and `view` folder respectivamente.  
+The code it's organized in modules, and each of the modules it's divided in the `controller`, `model` and `view` folder respectively.  
 
 ### Modules example:  
 ```
