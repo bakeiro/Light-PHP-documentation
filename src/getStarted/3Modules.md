@@ -1,4 +1,4 @@
-# :earth_africa: Overview
+# Modules
 
 ### Light-PHP structure
 Here I will show you how to understand and develop a simple MVC page using Light-PHP framework, and explaining how to organize the code.  
@@ -8,21 +8,20 @@ The code it's organized in modules, and each of the modules it's divided in the 
 ### Modules example:  
 ```
    src/
-    ├─ controller
-    │  ├─ product
+    ├─ Product
+    │  ├─ controller
     │  │     ├─ productController.php
     │  │     └─ priceController.php
-    │  └ user
-    │       └─ userController.php
-    |
-    ├─ model
-    │  └─ product
-    │       ├─ productModel.php
-    │       └─ priceModel.php
-    └─ view
-       └─ template
-            └─ product
-                └─ productView.php
+    │  ├─ model
+    │  │    ├─ priceModel.php
+    │  │    └─ productModel.php
+    |  └─ view
+    │       └─ productView.php
+    │
+    └─ User
+       └─ controller
+            └─ userController.php
+    
 ```
 In this example you can see 2 modules, `product` and `user` module. The most basic module it's made of a single file controller, but it can be a Controller and a Model (very common in API apps) or it can include a View, if you output the template from PHP.  
 In every folder contains all the files needed to use that module, as you can see product need to files, this is done just simple organization.  
@@ -30,7 +29,7 @@ In every folder contains all the files needed to use that module, as you can see
 ### Creating your first page:  
 
 ### Controller 
-`src/controller/product/productController.php`
+`src/product/controller/productController.php`
 
 ``` php
 namespace Controller;
@@ -41,7 +40,7 @@ class ProductController
     {
 		$prod_id = $_GET["prod_id"]; // Already escaped
 
-        $product_model = new Model\productModel(); // Autoload magic ;)
+        $product_model = new Model\productModel(); // PSR-4 Names ;)
 
 		$data = array();
 		$data["prod"] = $product_model->getProd($prod_id);
@@ -52,7 +51,7 @@ class ProductController
 ```
 
 ### Model
-`src/model/product/productModel.php`
+`src/product/model/productModel.php`
 ``` php
 namespace Model;
 
@@ -66,11 +65,11 @@ class ProductModel
 ```
 
 ### View
-`src/view/template/product/productView.php`
+`src/product/view/productView.php`
 ``` html
 <h1>Product info</h1>
-<p>{{ prod["name"] }}</p>
-<p>{{ prod["description"] }}</p>
+<p><?= prod["name"] ?></p>
+<p><?= prod["description"] ?></p>
 ```
 
 ### Routing

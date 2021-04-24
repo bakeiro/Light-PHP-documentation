@@ -1,4 +1,4 @@
-# :art: Template
+# Output
 
 Light-PHP comes with a tiny but useful template engine, it can output templates, replacing placeholders by variables, it can output the template directly to the end user, or returning as string, it can add JS and CSS files to one specific template and more.  
 

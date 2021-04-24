@@ -1,4 +1,4 @@
-# :gear: Configuration
+# Configuration
 The configuration of this framework it's located under the `system/config` directory, there you can modify the framework settings, php settings and the custom urls.  
 
 ### Framework settings

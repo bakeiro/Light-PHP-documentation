@@ -1,4 +1,4 @@
-# :computer: Session
+# Session
 
 Session in this framework, is managed by a global class included called `Session`, the reason for using this and not PHP's $_SESSION, it's that, using `Session` all the information is encrypted by default,  is protected against session hijacking, check wether the fingerprint it's always the same it's not expired and more!.  
 Session it's always started by default and ready to use.  

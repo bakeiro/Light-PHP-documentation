@@ -1,4 +1,4 @@
-# :floppy_disk: Database  
+# Database  
 
 ### Introduction
 Light-PHP comes with tiny database class, which abstracts the interaction with the database, making it easier to use. Database credentials are specified in the `system/config/config.php` file, so you only specify there the credentials and you are ready to use the Database class!.  

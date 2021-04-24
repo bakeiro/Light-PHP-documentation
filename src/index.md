@@ -1,9 +1,3 @@
-<style module>
-	.structure_img {
-		height: 750px;
-	}
-</style>
-
 # Light-PHP
 
 ### Introduction
@@ -30,12 +24,3 @@ More info  [Github project](https://github.com/bakeiro/Light-PHP/)
 - Much more!
 
 [Documentation](./overview/Overview.html) 
-
-### Structure
-
-<img :class="$style.structure_img" src="./images/structure_png_new.png" alt="foo">
-
-### Sample site
-After starting the web and database server, you will see the sample site, this site is an example of how to do a project using this framework
-
-<img src="./images/welcomePage.png" alt="foo">

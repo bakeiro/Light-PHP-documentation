@@ -1,4 +1,4 @@
-# :wrench: Helper class
+# Util
 Light-PHP comes with a helper class which includes useful methods out of the box, here are its functions:  
 
 ### arraySortByColumn

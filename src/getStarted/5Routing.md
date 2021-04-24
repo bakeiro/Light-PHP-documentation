@@ -1,4 +1,4 @@
-# :truck: Routing
+# Routing
 
 Light-PHP provides a simple routing system, it consist in put the controller's function to be executed in the route GET parameter, like this:  
 `yourdomain.com/index.php?route=product/price/showPrice`

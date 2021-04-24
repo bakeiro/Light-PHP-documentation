@@ -12,39 +12,37 @@ module.exports = {
 		displayAllHeaders: true,
 		sidebar: [
 			{
-				title: 'Introduction',
+				title: 'Get started :rocket:',
 				collapsable: false,
 				children: [
-                    ['/overview/Installation', 'Installation'],
-					['/overview/Overview', 'Overview'],
-					['/overview/Routing', 'Routing'],
-					['/overview/Database', 'Database'],
-                    ['/overview/Template', 'Template'],
-                    ['/overview/Session', 'Session'],
-                    ['/overview/Helper', 'Helper'],
-					['/overview/Config', 'Config'],
-                    ['/overview/DebugConsole', 'Debug console'],
-                    ['/overview/Faq', 'FAQ']
+          ['/overview/1Introduction', 'Introduction'],
+          ['/overview/2Installation', 'Installation'],
+          ['/overview/3Modules', 'Modular structure'],
+          ['/overview/4Services', 'Services container'],
+          ['/overview/5Routing', 'Routing'],
+          ['/overview/6Config', 'Config'],
+          ['/overview/7Faq', 'FAQ']
 				]
 			},
-			{
-				title: 'Advanced',
-				children: [	
-                    ['/advanced/Engine', 'Engine'],
-                    ['/advanced/ErrorLoggin', 'Logs'],
-                    ['/advanced/MoreInfo', 'More info'],
-                    ['/advanced/StartUpProcess', 'Start up process'],
-                    ['/advanced/Security', 'Security']
+      {
+				title: 'Services :jigsaw:',
+				collapsable: false,
+				children: [
+          ['/overview/Database', 'Database'],
+          ['/overview/Template', 'Template'],
+          ['/overview/Session', 'Session'],
+          ['/overview/Helper', 'Helper'],
+          ['/overview/DebugConsole', 'Debug console'],
 				]
-            },
-            {
-                title: 'Cookbook',
-				children: [	
-                    ['/cookbook/CI-CD', 'CD/CD'],
-                    ['/cookbook/light-php-site', 'light-php-site'],
-                    ['/cookbook/encrypting_user_pass', 'Storing user pass'],
-                    ['/cookbook/ErrorHandler', 'Error handler'],
-                    ['/cookbook/multilanguaje_site', 'multilanguaje']
+			},
+      {
+        title: 'Cookbook :notebook_with_decorative_cover:',
+				  children: [	
+            ['/cookbook/CI-CD', 'CD/CD'],
+            ['/cookbook/light-php-site', 'light-php-site'],
+            ['/cookbook/encrypting_user_pass', 'Storing user pass'],
+            ['/cookbook/ErrorHandler', 'Error handler'],
+            ['/cookbook/multilanguaje_site', 'multilanguaje site']
 				]
 			}
 		]
