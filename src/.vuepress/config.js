@@ -15,34 +15,26 @@ module.exports = {
 				title: 'Get started :rocket:',
 				collapsable: false,
 				children: [
-          ['/overview/1Introduction', 'Introduction'],
-          ['/overview/2Installation', 'Installation'],
-          ['/overview/3Modules', 'Modular structure'],
-          ['/overview/4Services', 'Services container'],
-          ['/overview/5Routing', 'Routing'],
-          ['/overview/6Config', 'Config'],
-          ['/overview/7Faq', 'FAQ']
+          ['/getStarted/1Introduction', 'Introduction :rocket:'],
+          ['/getStarted/2Installation', 'Installation'],
+          ['/getStarted/3Modules', 'Modular structure'],
+          ['/getStarted/4Services', 'Services container'],
+          ['/getStarted/5Routing', 'Routing'],
+          ['/getStarted/6Config', 'Config'],
+          ['/getStarted/7Faq', 'FAQ']
 				]
 			},
       {
 				title: 'Services :jigsaw:',
-				collapsable: false,
+				collapsable: true,
 				children: [
-          ['/overview/Database', 'Database'],
-          ['/overview/Template', 'Template'],
-          ['/overview/Session', 'Session'],
-          ['/overview/Helper', 'Helper'],
-          ['/overview/DebugConsole', 'Debug console'],
-				]
-			},
-      {
-        title: 'Cookbook :notebook_with_decorative_cover:',
-				  children: [	
-            ['/cookbook/CI-CD', 'CD/CD'],
-            ['/cookbook/light-php-site', 'light-php-site'],
-            ['/cookbook/encrypting_user_pass', 'Storing user pass'],
-            ['/cookbook/ErrorHandler', 'Error handler'],
-            ['/cookbook/multilanguaje_site', 'multilanguaje site']
+          ['/services/Database', 'Config'],
+          ['/services/Database', 'Database'],
+          ['/services/DebugConsole', 'Console'],
+          ['/services/Logger', 'Logger'],
+          ['/services/Output', 'Output'],
+          ['/services/Session', 'Session'],
+          ['/services/Util', 'Util'],
 				]
 			}
 		]

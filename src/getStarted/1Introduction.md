@@ -1,27 +1,33 @@
+# Light-PHP
 
+Light PHP it's an open-source minimal PHP framework that only includes what's necessary, avoiding big and complex structures, yet capable of building big and fully-featured API/Websites. 
 
-# :open_file_folder: Folder structure
+### Modules structure
+All the application code in Light-PHP it's divided by modules, this makes the code separated and decoupled also easier to maintain and modify. All the modules are located under the `src/` path.  
+These modules it's what Light-PHP uses to run your application, so, you won't write any application code outside the `src/` (unless you want to change the framework's behavior).   
+(more info here)  
+
+### MVC structure
+All the modules have a MVC structure, so, inside each module, it's divided by a `model/`, `view/`, `controller/` folders (dividing the module's responsibility).  
+In some cases you create a module which don't return any template (i.e: returning a JSON), for this, you can create a module without the view folder (it's not mandatory). Same for Model folder, if your module doesn't needed you don't have to create it. (excepting controller folder, must be there always).
+
+### Services
+Light-PHP has a service container, this means, that you can access to services (useful classes already instantiated) from the controller and the model, being to use $this->service_name to use it. (i.e: $this->database, $this->session...).  
+(more info here)  
+
+### Folder structure
 
 The folder structure follows the next schema:
 
 ### Main folders
-There are three main folders:  
-`src`: Stores the customer's site (what the user can access)  
-`system`: Stores the engine, the libraries, configuration files...
+ /
+ ├─ public
+ ├─ src
+ └─ system
 
-### MVC structure
-This structure is repeated in the `admin` and in the `site` folders (I separate them for simplicity)   
-`model`: Database queries for the user site  
-`controller`: Controller functions for the user site  
-`view`: containing the PHP templates + the JS/CSS/Images files  
-
-### System
-`system`: Containing all the needed for the correct working of the framework  
-`system/config`: Includes all the configuration and routing files  
-`system/engine`: Framework engine  
-`system/libraries`: Composer libraries  
-`system/logs`: Logs which stores the warnings and exceptions (if any)  
-
+`src`:  Application modules  
+`system`: Stores the engine, the libraries and configuration
+`public`: Index.php and files that are accesible from outside
 
 ### System folder structure:  
 ```
@@ -37,4 +43,3 @@ This structure is repeated in the `admin` and in the `site` folders (I separate 
 - `config:` Here you can edit the routes, framework settings and the php ini settings
 - `engine:` This folder includes all the basic php files for running the framework, without one of this files the framework can't run
 - `library:` Here includes the dependencies that make everything easier, like database, session, template, useful functions etc
-- `writable:` This folder it's designed to store all the files, that change dynamically, like logs, cache, session in files (if the case) and more.

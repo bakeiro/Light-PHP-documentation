@@ -6,8 +6,9 @@ I know that there are a lot of PHP frameworks available, but I wanted to build o
 ### Does this project follows the good practices ?
 This projects implements:
 
-- PSR-1 coding style
+- PSR-12 coding style
 - PSR-4 autoloading
+- PSR-11 container
 - Security implementations
 - Coding patterns (MVC)
 - Clean code
