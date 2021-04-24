@@ -73,15 +73,7 @@ class ProductModel
 ```
 
 ### Routing
-`system/config/routes.php`
-``` php
-$routes = array();
-$routes["/product_info"] = "product/product/getProduct"
-```
-
-### Example:  
 `yourpage.com/index.php?route=product/product/getProduct&prod_id=1`  
-`yourpage.com/product_info&prod_id=1`  
 
 ### That's all!
 There you go, you have just built a MCV page in less than 5 minutes.
