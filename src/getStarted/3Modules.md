@@ -42,7 +42,7 @@ class ProductController extends Engine\Base
     {
 		$prod_id = $_GET["prod_id"]; // Already escaped
 
-    $product_model = new Model\productModel(); // PSR-4 Names ;)
+        $product_model = new Model\productModel(); // PSR-4 Names ;)
 
 		$data = array();
 		$data["prod"] = $product_model->getProd($prod_id);
